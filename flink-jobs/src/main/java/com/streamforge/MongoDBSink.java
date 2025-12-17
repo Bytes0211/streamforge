@@ -17,8 +17,8 @@ public class MongoDBSink extends RichSinkFunction<String> {
     
     private static final Logger LOG = LoggerFactory.getLogger(MongoDBSink.class);
     
-    private transient MongoClient mongoClient;
-    private transient MongoCollection<Document> collection;
+    protected transient MongoClient mongoClient;
+    protected transient MongoCollection<Document> collection;
     
     @Override
     public void open(Configuration parameters) throws Exception {
