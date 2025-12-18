@@ -5,6 +5,7 @@ This document contains Mermaid diagrams illustrating the StreamForge project wor
 ## Project Development Workflow
 
 ```mermaid
+
     graph TB
         Start([Project Start]) --> Phase1[Phase 1: Local Development]
         
