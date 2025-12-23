@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-frontend-dev-6be20-authRole",
+      "UnauthRoleArn": "arn:aws:iam::696056865313:role/amplify-frontend-dev-6be20-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::696056865313:role/amplify-frontend-dev-6be20-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-frontend-dev-6be20-deployment",
+      "UnauthRoleName": "amplify-frontend-dev-6be20-unauthRole",
+      "StackName": "amplify-frontend-dev-6be20",
+      "StackId": "arn:aws:cloudformation:us-east-1:696056865313:stack/amplify-frontend-dev-6be20/d4d70ea0-dfaf-11f0-93ea-0e15c688abe7",
+      "AmplifyAppId": "d136z8orhz5c49"
+    },
+    "categories": {
+      "function": {
+        "streamforgelambda": {
+          "deploymentBucketName": "amplify-frontend-dev-6be20-deployment",
+          "s3Key": "amplify-builds/streamforgelambda-4f6444414e6469586374-build.zip"
+        }
+      },
+      "api": {
+        "streamforge": {}
+      }
+    }
+  }
+}
