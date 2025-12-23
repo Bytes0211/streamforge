@@ -14,3 +14,8 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+backend:
+  phases:
+    build:
+      commands:
+        - '# Skip Amplify backend deployment - backend already configured'
