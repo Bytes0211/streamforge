@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
@@ -43,7 +41,11 @@ services:
     container_name: streamforge-flink-jobmanager
     ports:
       - "8081:8081"
-    command: jobmanager
+    command: |
+      bash -c '
+      chown -R flink:flink /tmp/flink-checkpoints /tmp/flink-savepoints
+      /docker-entrypoint.sh jobmanager
+      '
     environment:
       - |
         FLINK_PROPERTIES=
@@ -64,7 +66,11 @@ services:
     container_name: streamforge-flink-taskmanager
     depends_on:
       - flink-jobmanager
-    command: taskmanager
+    command: |
+      bash -c '
+      chown -R flink:flink /tmp/flink-checkpoints
+      /docker-entrypoint.sh taskmanager
+      '
     scale: 1
     environment:
       - |
@@ -97,8 +103,11 @@ services:
 
 volumes:
   flink-checkpoints:
+    driver: local
   flink-savepoints:
+    driver: local
   mongodb-data:
+    driver: local
 
 networks:
   streamforge-network:

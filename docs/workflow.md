@@ -73,6 +73,7 @@ This document contains Mermaid diagrams illustrating the StreamForge project wor
 ## Data Flow Architecture
 
 ```mermaid
+
 graph LR
     subgraph "Data Sources"
         DS1[External API]

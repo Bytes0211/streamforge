@@ -1,0 +1,156 @@
+{
+  _id: ObjectId('694995dfd3237c78ad885de0'),
+  userId: 'test-user-1',
+  eventType: 'click',
+  count: Long('1'),
+  sum: 10.5,
+  avg: 10.5,
+  min: 10.5,
+  max: 10.5,
+  windowStart: ISODate('2025-12-22T19:01:23.716Z'),
+  windowEnd: ISODate('2025-12-22T19:01:23.716Z'),
+  processedAt: ISODate('2025-12-22T19:02:55.404Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e51'),
+  userId: 'test-user-1',
+  eventType: 'click',
+  count: Long('1'),
+  sum: 10.5,
+  avg: 10.5,
+  min: 10.5,
+  max: 10.5,
+  windowStart: ISODate('2025-12-22T19:02:54.508Z'),
+  windowEnd: ISODate('2025-12-22T19:02:54.508Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.518Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e52'),
+  userId: 'test-user-1',
+  eventType: 'view',
+  count: Long('10'),
+  sum: 690,
+  avg: 69,
+  min: 1.5,
+  max: 136.5,
+  windowStart: ISODate('2025-12-22T19:02:58.813Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.172Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.520Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e53'),
+  userId: 'test-user-0',
+  eventType: 'click',
+  count: Long('10'),
+  sum: 825,
+  avg: 82.5,
+  min: 15,
+  max: 150,
+  windowStart: ISODate('2025-12-22T19:02:58.855Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.207Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.521Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e54'),
+  userId: 'test-user-9',
+  eventType: 'view',
+  count: Long('10'),
+  sum: 810,
+  avg: 81,
+  min: 13.5,
+  max: 148.5,
+  windowStart: ISODate('2025-12-22T19:02:58.851Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.203Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.522Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e55'),
+  userId: 'test-user-8',
+  eventType: 'click',
+  count: Long('10'),
+  sum: 795,
+  avg: 79.5,
+  min: 12,
+  max: 147,
+  windowStart: ISODate('2025-12-22T19:02:58.847Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.200Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.523Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e56'),
+  userId: 'test-user-3',
+  eventType: 'view',
+  count: Long('10'),
+  sum: 720,
+  avg: 72,
+  min: 4.5,
+  max: 139.5,
+  windowStart: ISODate('2025-12-22T19:02:58.828Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.180Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.523Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e57'),
+  userId: 'test-user-6',
+  eventType: 'click',
+  count: Long('10'),
+  sum: 765,
+  avg: 76.5,
+  min: 9,
+  max: 144,
+  windowStart: ISODate('2025-12-22T19:02:58.840Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.192Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.524Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e58'),
+  userId: 'test-user-5',
+  eventType: 'view',
+  count: Long('10'),
+  sum: 750,
+  avg: 75,
+  min: 7.5,
+  max: 142.5,
+  windowStart: ISODate('2025-12-22T19:02:58.836Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.188Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.524Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e59'),
+  userId: 'test-user-4',
+  eventType: 'click',
+  count: Long('10'),
+  sum: 735,
+  avg: 73.5,
+  min: 6,
+  max: 141,
+  windowStart: ISODate('2025-12-22T19:02:58.832Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.184Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.525Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e5a'),
+  userId: 'test-user-7',
+  eventType: 'view',
+  count: Long('10'),
+  sum: 780,
+  avg: 78,
+  min: 10.5,
+  max: 145.5,
+  windowStart: ISODate('2025-12-22T19:02:58.843Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.196Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.525Z')
+}
+{
+  _id: ObjectId('694995f2d3237c78ad885e5b'),
+  userId: 'test-user-2',
+  eventType: 'click',
+  count: Long('10'),
+  sum: 705,
+  avg: 70.5,
+  min: 3,
+  max: 138,
+  windowStart: ISODate('2025-12-22T19:02:58.822Z'),
+  windowEnd: ISODate('2025-12-22T19:02:59.176Z'),
+  processedAt: ISODate('2025-12-22T19:03:14.526Z')
+}

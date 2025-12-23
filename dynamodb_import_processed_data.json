@@ -1,0 +1,3019 @@
+[
+  {
+    "streamforge-processed-data-dev": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995dfd3237c78ad885ddf"
+            },
+            "timestamp": {
+              "N": "1766430174508"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de1"
+            },
+            "timestamp": {
+              "N": "1766430178813"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de2"
+            },
+            "timestamp": {
+              "N": "1766430178822"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de3"
+            },
+            "timestamp": {
+              "N": "1766430178828"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de4"
+            },
+            "timestamp": {
+              "N": "1766430178832"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de5"
+            },
+            "timestamp": {
+              "N": "1766430178836"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de6"
+            },
+            "timestamp": {
+              "N": "1766430178840"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de7"
+            },
+            "timestamp": {
+              "N": "1766430178843"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de8"
+            },
+            "timestamp": {
+              "N": "1766430178847"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885de9"
+            },
+            "timestamp": {
+              "N": "1766430178851"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dea"
+            },
+            "timestamp": {
+              "N": "1766430178855"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885deb"
+            },
+            "timestamp": {
+              "N": "1766430178859"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dec"
+            },
+            "timestamp": {
+              "N": "1766430178863"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885ded"
+            },
+            "timestamp": {
+              "N": "1766430178867"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dee"
+            },
+            "timestamp": {
+              "N": "1766430178871"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885def"
+            },
+            "timestamp": {
+              "N": "1766430178875"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df0"
+            },
+            "timestamp": {
+              "N": "1766430178879"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df1"
+            },
+            "timestamp": {
+              "N": "1766430178882"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df2"
+            },
+            "timestamp": {
+              "N": "1766430178886"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df3"
+            },
+            "timestamp": {
+              "N": "1766430178890"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df4"
+            },
+            "timestamp": {
+              "N": "1766430178893"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df5"
+            },
+            "timestamp": {
+              "N": "1766430178897"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df6"
+            },
+            "timestamp": {
+              "N": "1766430178900"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df7"
+            },
+            "timestamp": {
+              "N": "1766430178904"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df8"
+            },
+            "timestamp": {
+              "N": "1766430178908"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "streamforge-processed-data-dev": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885df9"
+            },
+            "timestamp": {
+              "N": "1766430178912"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dfa"
+            },
+            "timestamp": {
+              "N": "1766430178915"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dfb"
+            },
+            "timestamp": {
+              "N": "1766430178920"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dfc"
+            },
+            "timestamp": {
+              "N": "1766430178923"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dfd"
+            },
+            "timestamp": {
+              "N": "1766430178927"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dfe"
+            },
+            "timestamp": {
+              "N": "1766430178931"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885dff"
+            },
+            "timestamp": {
+              "N": "1766430178935"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e00"
+            },
+            "timestamp": {
+              "N": "1766430178940"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e01"
+            },
+            "timestamp": {
+              "N": "1766430178944"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e02"
+            },
+            "timestamp": {
+              "N": "1766430178948"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e03"
+            },
+            "timestamp": {
+              "N": "1766430178952"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e04"
+            },
+            "timestamp": {
+              "N": "1766430178956"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e05"
+            },
+            "timestamp": {
+              "N": "1766430178960"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e06"
+            },
+            "timestamp": {
+              "N": "1766430178964"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e07"
+            },
+            "timestamp": {
+              "N": "1766430178967"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e08"
+            },
+            "timestamp": {
+              "N": "1766430178971"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e09"
+            },
+            "timestamp": {
+              "N": "1766430178975"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0a"
+            },
+            "timestamp": {
+              "N": "1766430178979"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0b"
+            },
+            "timestamp": {
+              "N": "1766430178983"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0c"
+            },
+            "timestamp": {
+              "N": "1766430178986"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0d"
+            },
+            "timestamp": {
+              "N": "1766430178990"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0e"
+            },
+            "timestamp": {
+              "N": "1766430178993"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e0f"
+            },
+            "timestamp": {
+              "N": "1766430178996"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e10"
+            },
+            "timestamp": {
+              "N": "1766430179000"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e11"
+            },
+            "timestamp": {
+              "N": "1766430179004"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "streamforge-processed-data-dev": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e12"
+            },
+            "timestamp": {
+              "N": "1766430179008"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e13"
+            },
+            "timestamp": {
+              "N": "1766430179012"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e14"
+            },
+            "timestamp": {
+              "N": "1766430179016"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e15"
+            },
+            "timestamp": {
+              "N": "1766430179019"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e16"
+            },
+            "timestamp": {
+              "N": "1766430179023"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e17"
+            },
+            "timestamp": {
+              "N": "1766430179027"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e18"
+            },
+            "timestamp": {
+              "N": "1766430179031"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e19"
+            },
+            "timestamp": {
+              "N": "1766430179036"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1a"
+            },
+            "timestamp": {
+              "N": "1766430179040"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1b"
+            },
+            "timestamp": {
+              "N": "1766430179044"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1c"
+            },
+            "timestamp": {
+              "N": "1766430179047"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1d"
+            },
+            "timestamp": {
+              "N": "1766430179051"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1e"
+            },
+            "timestamp": {
+              "N": "1766430179055"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e1f"
+            },
+            "timestamp": {
+              "N": "1766430179059"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e20"
+            },
+            "timestamp": {
+              "N": "1766430179063"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e21"
+            },
+            "timestamp": {
+              "N": "1766430179067"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e22"
+            },
+            "timestamp": {
+              "N": "1766430179071"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e23"
+            },
+            "timestamp": {
+              "N": "1766430179075"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e24"
+            },
+            "timestamp": {
+              "N": "1766430179079"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e25"
+            },
+            "timestamp": {
+              "N": "1766430179083"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e26"
+            },
+            "timestamp": {
+              "N": "1766430179087"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e27"
+            },
+            "timestamp": {
+              "N": "1766430179091"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e28"
+            },
+            "timestamp": {
+              "N": "1766430179095"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e29"
+            },
+            "timestamp": {
+              "N": "1766430179099"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2a"
+            },
+            "timestamp": {
+              "N": "1766430179103"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "streamforge-processed-data-dev": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2b"
+            },
+            "timestamp": {
+              "N": "1766430179108"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2c"
+            },
+            "timestamp": {
+              "N": "1766430179112"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2d"
+            },
+            "timestamp": {
+              "N": "1766430179116"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2e"
+            },
+            "timestamp": {
+              "N": "1766430179120"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e2f"
+            },
+            "timestamp": {
+              "N": "1766430179124"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e30"
+            },
+            "timestamp": {
+              "N": "1766430179128"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e31"
+            },
+            "timestamp": {
+              "N": "1766430179131"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e32"
+            },
+            "timestamp": {
+              "N": "1766430179135"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e33"
+            },
+            "timestamp": {
+              "N": "1766430179139"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e34"
+            },
+            "timestamp": {
+              "N": "1766430179143"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e35"
+            },
+            "timestamp": {
+              "N": "1766430179147"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e36"
+            },
+            "timestamp": {
+              "N": "1766430179152"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e37"
+            },
+            "timestamp": {
+              "N": "1766430179156"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e38"
+            },
+            "timestamp": {
+              "N": "1766430179160"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e39"
+            },
+            "timestamp": {
+              "N": "1766430179164"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3a"
+            },
+            "timestamp": {
+              "N": "1766430179168"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3b"
+            },
+            "timestamp": {
+              "N": "1766430179172"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3c"
+            },
+            "timestamp": {
+              "N": "1766430179176"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3d"
+            },
+            "timestamp": {
+              "N": "1766430179180"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3e"
+            },
+            "timestamp": {
+              "N": "1766430179184"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e3f"
+            },
+            "timestamp": {
+              "N": "1766430179188"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e40"
+            },
+            "timestamp": {
+              "N": "1766430179192"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e41"
+            },
+            "timestamp": {
+              "N": "1766430179196"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e42"
+            },
+            "timestamp": {
+              "N": "1766430179200"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e43"
+            },
+            "timestamp": {
+              "N": "1766430179203"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "streamforge-processed-data-dev": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995e3d3237c78ad885e44"
+            },
+            "timestamp": {
+              "N": "1766430179207"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e47"
+            },
+            "timestamp": {
+              "N": "1766430193673"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e48"
+            },
+            "timestamp": {
+              "N": "1766430193674"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e49"
+            },
+            "timestamp": {
+              "N": "1766430193675"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4a"
+            },
+            "timestamp": {
+              "N": "1766430193676"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4b"
+            },
+            "timestamp": {
+              "N": "1766430193677"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4c"
+            },
+            "timestamp": {
+              "N": "1766430193677"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4d"
+            },
+            "timestamp": {
+              "N": "1766430193678"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4e"
+            },
+            "timestamp": {
+              "N": "1766430193679"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e4f"
+            },
+            "timestamp": {
+              "N": "1766430193680"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "694995f2d3237c78ad885e50"
+            },
+            "timestamp": {
+              "N": "1766430193681"
+            },
+            "type": {
+              "S": "unknown"
+            },
+            "userId": {
+              "S": "unknown"
+            },
+            "value": {
+              "N": "0"
+            },
+            "payload": {
+              "S": ""
+            },
+            "processedAt": {
+              "N": "1766459743996"
+            }
+          }
+        }
+      }
+    ]
+  }
+]

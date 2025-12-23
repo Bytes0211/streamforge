@@ -4,6 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.streamforge.model.Event;
 import de.bwaldvogel.mongo.MongoServer;
 import de.bwaldvogel.mongo.backend.memory.MemoryBackend;
 import org.apache.flink.configuration.Configuration;
@@ -79,19 +80,25 @@ public class MongoDBSinkTest {
         Configuration config = new Configuration();
         sink.open(config);
         
-        String testData = "test data value";
+        Event testEvent = new Event("id1", "click", "user123", 10.5, 
+                                    System.currentTimeMillis(), "test payload");
         
         // Invoke the sink to insert data
-        sink.invoke(testData, null);
+        sink.invoke(testEvent, null);
         
         // Verify document was inserted
         long count = collection.countDocuments();
         assertEquals("Should have inserted one document", 1, count);
         
-        // Verify document content
+        // Verify document content (new schema: data, timestamp, processedAt)
         Document insertedDoc = collection.find().first();
         assertNotNull("Document should exist", insertedDoc);
-        assertEquals("Data field should match", testData, insertedDoc.getString("data"));
+        
+        // Verify schema-required fields
+        assertNotNull("Data field should exist", insertedDoc.getString("data"));
+        assertTrue("Data should contain event id", insertedDoc.getString("data").contains("id1"));
+        assertTrue("Data should contain event type", insertedDoc.getString("data").contains("click"));
+        assertTrue("Data should contain userId", insertedDoc.getString("data").contains("user123"));
         assertNotNull("Timestamp field should exist", insertedDoc.getLong("timestamp"));
         assertNotNull("ProcessedAt field should exist", insertedDoc.getDate("processedAt"));
         
@@ -107,24 +114,32 @@ public class MongoDBSinkTest {
         Configuration config = new Configuration();
         sink.open(config);
         
-        List<String> testDataList = new ArrayList<>();
-        testDataList.add("message1");
-        testDataList.add("message2");
-        testDataList.add("message3");
+        List<Event> testEvents = new ArrayList<>();
+        testEvents.add(new Event("id1", "click", "user1", 10.0, 
+                                System.currentTimeMillis(), "payload1"));
+        testEvents.add(new Event("id2", "view", "user2", 20.0, 
+                                System.currentTimeMillis(), "payload2"));
+        testEvents.add(new Event("id3", "click", "user3", 30.0, 
+                                System.currentTimeMillis(), "payload3"));
         
         // Invoke the sink multiple times
-        for (String data : testDataList) {
-            sink.invoke(data, null);
+        for (Event event : testEvents) {
+            sink.invoke(event, null);
         }
         
         // Verify all documents were inserted
         long count = collection.countDocuments();
         assertEquals("Should have inserted three documents", 3, count);
         
-        // Verify each document
+        // Verify each document has required fields and contains event data
         List<Document> documents = collection.find().into(new ArrayList<>());
-        for (int i = 0; i < testDataList.size(); i++) {
-            assertEquals("Document data should match", testDataList.get(i), documents.get(i).getString("data"));
+        for (int i = 0; i < testEvents.size(); i++) {
+            Document doc = documents.get(i);
+            assertNotNull("Data field should exist", doc.getString("data"));
+            assertTrue("Document should contain event id", 
+                      doc.getString("data").contains(testEvents.get(i).getId()));
+            assertNotNull("Timestamp should exist", doc.getLong("timestamp"));
+            assertNotNull("ProcessedAt should exist", doc.getDate("processedAt"));
         }
         
         sink.close();

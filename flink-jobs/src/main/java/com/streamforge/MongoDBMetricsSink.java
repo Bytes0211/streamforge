@@ -4,19 +4,21 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.streamforge.model.Event;
+import com.streamforge.model.AggregatedMetrics;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
 import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Date;
+
 /**
- * Custom Flink sink that writes Event data to MongoDB
+ * Custom Flink sink that writes aggregated metrics to MongoDB
  */
-public class MongoDBSink extends RichSinkFunction<Event> {
+public class MongoDBMetricsSink extends RichSinkFunction<AggregatedMetrics> {
     
-    private static final Logger LOG = LoggerFactory.getLogger(MongoDBSink.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MongoDBMetricsSink.class);
     
     protected transient MongoClient mongoClient;
     protected transient MongoCollection<Document> collection;
@@ -31,9 +33,9 @@ public class MongoDBSink extends RichSinkFunction<Event> {
         try {
             mongoClient = MongoClients.create(connectionString);
             MongoDatabase database = mongoClient.getDatabase("streamforge");
-            collection = database.getCollection("processed_data");
+            collection = database.getCollection("aggregated_metrics");
             
-            LOG.info("Successfully connected to MongoDB");
+            LOG.info("Successfully connected to MongoDB for metrics");
         } catch (Exception e) {
             LOG.error("Failed to connect to MongoDB", e);
             throw e;
@@ -41,30 +43,25 @@ public class MongoDBSink extends RichSinkFunction<Event> {
     }
     
     @Override
-    public void invoke(Event event, Context context) throws Exception {
+    public void invoke(AggregatedMetrics metrics, Context context) throws Exception {
         try {
-            // Convert event to JSON string for the 'data' field
-            String dataJson = String.format(
-                "{\"id\":\"%s\",\"type\":\"%s\",\"userId\":\"%s\",\"value\":%f,\"payload\":\"%s\"}",
-                event.getId(), event.getType(), event.getUserId(), 
-                event.getValue(), event.getPayload()
-            );
-            
             Document doc = new Document()
-                .append("data", dataJson)
-                .append("timestamp", event.getTimestamp())
-                .append("processedAt", new java.util.Date());
-            
-            // Optional fields for tracking
-            if (context != null) {
-                // Note: Getting Kafka offset/partition requires KafkaSink context
-                // These are optional per schema, so safe to omit for now
-            }
+                .append("userId", metrics.getUserId())
+                .append("eventType", metrics.getEventType())
+                .append("count", metrics.getCount())
+                .append("sum", metrics.getSum())
+                .append("avg", metrics.getAvg())
+                .append("min", metrics.getMin())
+                .append("max", metrics.getMax())
+                .append("windowStart", new Date(metrics.getWindowStart()))
+                .append("windowEnd", new Date(metrics.getWindowEnd()))
+                .append("processedAt", new Date());
             
             collection.insertOne(doc);
-            LOG.debug("Inserted event into MongoDB: {}", event.getId());
+            LOG.debug("Inserted metrics into MongoDB for user: {}, type: {}", 
+                     metrics.getUserId(), metrics.getEventType());
         } catch (Exception e) {
-            LOG.error("Error writing to MongoDB", e);
+            LOG.error("Error writing metrics to MongoDB", e);
             throw e;
         }
     }
@@ -74,7 +71,7 @@ public class MongoDBSink extends RichSinkFunction<Event> {
         super.close();
         if (mongoClient != null) {
             mongoClient.close();
-            LOG.info("Closed MongoDB connection");
+            LOG.info("Closed MongoDB metrics connection");
         }
     }
 }
