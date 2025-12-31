@@ -1,6 +1,3 @@
-# StreamForge AWS Infrastructure
-# Terraform configuration for production deployment
-
 terraform {
   required_version = ">= 1.0"
   
@@ -10,26 +7,10 @@ terraform {
       version = "~> 5.0"
     }
   }
-  
-  backend "s3" {
-    bucket         = "streamforge-terraform-state"
-    key            = "streamforge/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "streamforge-terraform-locks"
-  }
 }
 
 provider "aws" {
   region = var.aws_region
-  
-  default_tags {
-    tags = {
-      Project     = "StreamForge"
-      Environment = var.environment
-      ManagedBy   = "Terraform"
-    }
-  }
 }
 
 # Variables
@@ -51,9 +32,24 @@ variable "project_name" {
   default     = "streamforge"
 }
 
-# DynamoDB Table for Processed Data
+# Local variables
+locals {
+  common_tags = {
+    Project     = var.project_name
+    Environment = var.environment
+    ManagedBy   = "Terraform"
+  }
+  
+  resource_prefix = "${var.project_name}-${var.environment}"
+}
+
+# ====================================================================
+# DynamoDB Tables
+# ====================================================================
+
+# Table 1: Processed Events (equivalent to MongoDB processed_data collection)
 resource "aws_dynamodb_table" "processed_data" {
-  name           = "${var.project_name}-processed-data-${var.environment}"
+  name           = "${local.resource_prefix}-processed-data"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "id"
   range_key      = "timestamp"
@@ -73,6 +69,12 @@ resource "aws_dynamodb_table" "processed_data" {
     type = "S"
   }
   
+  attribute {
+    name = "type"
+    type = "S"
+  }
+  
+  # GSI for querying by userId
   global_secondary_index {
     name            = "UserIdIndex"
     hash_key        = "userId"
@@ -80,18 +82,35 @@ resource "aws_dynamodb_table" "processed_data" {
     projection_type = "ALL"
   }
   
-  point_in_time_recovery {
-    enabled = true
+  # GSI for querying by event type
+  global_secondary_index {
+    name            = "TypeIndex"
+    hash_key        = "type"
+    range_key       = "timestamp"
+    projection_type = "ALL"
   }
   
-  tags = {
-    Name = "${var.project_name}-processed-data"
+  ttl {
+    attribute_name = "expirationTime"
+    enabled        = true
   }
+  
+  point_in_time_recovery {
+    enabled = var.environment == "prod" ? true : false
+  }
+  
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-processed-data"
+      Description = "Stores processed events from Flink stream"
+    }
+  )
 }
 
-# DynamoDB Table for Aggregated Metrics
+# Table 2: Aggregated Metrics (windowed aggregations)
 resource "aws_dynamodb_table" "aggregated_metrics" {
-  name           = "${var.project_name}-aggregated-metrics-${var.environment}"
+  name           = "${local.resource_prefix}-aggregated-metrics"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "userId"
   range_key      = "windowStart"
@@ -111,6 +130,7 @@ resource "aws_dynamodb_table" "aggregated_metrics" {
     type = "S"
   }
   
+  # GSI for querying by event type
   global_secondary_index {
     name            = "EventTypeIndex"
     hash_key        = "eventType"
@@ -118,49 +138,69 @@ resource "aws_dynamodb_table" "aggregated_metrics" {
     projection_type = "ALL"
   }
   
-  point_in_time_recovery {
-    enabled = true
+  ttl {
+    attribute_name = "expirationTime"
+    enabled        = true
   }
   
-  tags = {
-    Name = "${var.project_name}-aggregated-metrics"
+  point_in_time_recovery {
+    enabled = var.environment == "prod" ? true : false
   }
+  
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-aggregated-metrics"
+      Description = "Stores windowed aggregation results"
+    }
+  )
 }
 
-# DynamoDB Table for Dead Letter Queue
+# Table 3: Dead Letter Queue
 resource "aws_dynamodb_table" "dead_letter_queue" {
-  name           = "${var.project_name}-dlq-${var.environment}"
+  name           = "${local.resource_prefix}-dlq"
   billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "id"
-  range_key      = "failedAt"
+  hash_key       = "errorId"
+  range_key      = "timestamp"
   
   attribute {
-    name = "id"
+    name = "errorId"
     type = "S"
   }
   
   attribute {
-    name = "failedAt"
+    name = "timestamp"
     type = "N"
   }
   
   ttl {
-    attribute_name = "expiresAt"
+    attribute_name = "expirationTime"
     enabled        = true
   }
   
-  tags = {
-    Name = "${var.project_name}-dlq"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-dlq"
+      Description = "Dead letter queue for failed events"
+    }
+  )
 }
 
+# ====================================================================
 # S3 Bucket for Flink Checkpoints
+# ====================================================================
+
 resource "aws_s3_bucket" "flink_checkpoints" {
-  bucket = "${var.project_name}-flink-checkpoints-${var.environment}"
+  bucket = "${local.resource_prefix}-flink-checkpoints"
   
-  tags = {
-    Name = "${var.project_name}-flink-checkpoints"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-flink-checkpoints"
+      Description = "Flink checkpoint storage"
+    }
+  )
 }
 
 resource "aws_s3_bucket_versioning" "flink_checkpoints" {
@@ -181,37 +221,99 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "flink_checkpoints
   }
 }
 
-# IAM Assume Role Policy Document
-data "aws_iam_policy_document" "flink_assume_role" {
-  statement {
-    effect = "Allow"
+resource "aws_s3_bucket_lifecycle_configuration" "flink_checkpoints" {
+  bucket = aws_s3_bucket.flink_checkpoints.id
+  
+  rule {
+    id     = "cleanup-old-checkpoints"
+    status = "Enabled"
     
-    principals {
-      type        = "Service"
-      identifiers = [
-        "kinesisanalytics.amazonaws.com"
-      ]
+    expiration {
+      days = 7
     }
     
-    actions = ["sts:AssumeRole"]
+    noncurrent_version_expiration {
+      noncurrent_days = 3
+    }
   }
 }
+
+resource "aws_s3_bucket_public_access_block" "flink_checkpoints" {
+  bucket = aws_s3_bucket.flink_checkpoints.id
+  
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+# ====================================================================
+# IAM Role and Policies for Flink
+# ====================================================================
 
 # IAM Role for Flink Application
-resource "aws_iam_role" "flink_app" {
-  name = "${var.project_name}-flink-role-${var.environment}"
+resource "aws_iam_role" "flink_role" {
+  name = "${local.resource_prefix}-flink-role"
   
-  assume_role_policy = data.aws_iam_policy_document.flink_assume_role.json
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = [
+            "kinesisanalytics.amazonaws.com",
+            "ec2.amazonaws.com"
+          ]
+        }
+      }
+    ]
+  })
   
-  tags = {
-    Name = "${var.project_name}-flink-role"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-flink-role"
+    }
+  )
 }
 
-# IAM Policy for Flink Application
-resource "aws_iam_role_policy" "flink_app" {
-  name = "${var.project_name}-flink-policy"
-  role = aws_iam_role.flink_app.id
+# Policy for DynamoDB access
+resource "aws_iam_policy" "flink_dynamodb_policy" {
+  name        = "${local.resource_prefix}-flink-dynamodb"
+  description = "Allow Flink to write to DynamoDB tables"
+  
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:PutItem",
+          "dynamodb:UpdateItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Query",
+          "dynamodb:Scan",
+          "dynamodb:BatchWriteItem"
+        ]
+        Resource = [
+          aws_dynamodb_table.processed_data.arn,
+          aws_dynamodb_table.aggregated_metrics.arn,
+          aws_dynamodb_table.dead_letter_queue.arn,
+          "${aws_dynamodb_table.processed_data.arn}/index/*",
+          "${aws_dynamodb_table.aggregated_metrics.arn}/index/*"
+        ]
+      }
+    ]
+  })
+}
+
+# Policy for S3 checkpoint access
+resource "aws_iam_policy" "flink_s3_policy" {
+  name        = "${local.resource_prefix}-flink-s3"
+  description = "Allow Flink to access checkpoint bucket"
   
   policy = jsonencode({
     Version = "2012-10-17"
@@ -228,69 +330,143 @@ resource "aws_iam_role_policy" "flink_app" {
           aws_s3_bucket.flink_checkpoints.arn,
           "${aws_s3_bucket.flink_checkpoints.arn}/*"
         ]
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "dynamodb:PutItem",
-          "dynamodb:GetItem",
-          "dynamodb:Query",
-          "dynamodb:Scan",
-          "dynamodb:BatchWriteItem"
-        ]
-        Resource = [
-          aws_dynamodb_table.processed_data.arn,
-          aws_dynamodb_table.aggregated_metrics.arn,
-          aws_dynamodb_table.dead_letter_queue.arn,
-          "${aws_dynamodb_table.processed_data.arn}/index/*",
-          "${aws_dynamodb_table.aggregated_metrics.arn}/index/*"
-        ]
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "kinesis:DescribeStream",
-          "kinesis:GetRecords",
-          "kinesis:GetShardIterator",
-          "kinesis:ListShards"
-        ]
-        Resource = "arn:aws:kinesis:${var.aws_region}:*:stream/${var.project_name}-*"
-      },
-      {
-        Effect = "Allow"
-        Action = [
-          "logs:CreateLogGroup",
-          "logs:CreateLogStream",
-          "logs:PutLogEvents"
-        ]
-        Resource = "arn:aws:logs:${var.aws_region}:*:log-group:/aws/flink/${var.project_name}*"
       }
     ]
   })
 }
 
+# Policy for CloudWatch Logs
+resource "aws_iam_policy" "flink_cloudwatch_policy" {
+  name        = "${local.resource_prefix}-flink-cloudwatch"
+  description = "Allow Flink to write logs to CloudWatch"
+  
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents",
+          "logs:DescribeLogStreams"
+        ]
+        Resource = "arn:aws:logs:${var.aws_region}:*:log-group:/aws/kinesis-analytics/${local.resource_prefix}*"
+      }
+    ]
+  })
+}
+
+# Attach policies to role
+resource "aws_iam_role_policy_attachment" "flink_dynamodb" {
+  role       = aws_iam_role.flink_role.name
+  policy_arn = aws_iam_policy.flink_dynamodb_policy.arn
+}
+
+resource "aws_iam_role_policy_attachment" "flink_s3" {
+  role       = aws_iam_role.flink_role.name
+  policy_arn = aws_iam_policy.flink_s3_policy.arn
+}
+
+resource "aws_iam_role_policy_attachment" "flink_cloudwatch" {
+  role       = aws_iam_role.flink_role.name
+  policy_arn = aws_iam_policy.flink_cloudwatch_policy.arn
+}
+
+# ====================================================================
+# VPC Endpoints (Cost Optimization)
+# ====================================================================
+
+# Get default VPC
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+}
+
+# VPC Endpoint for DynamoDB (Gateway endpoint - free)
+resource "aws_vpc_endpoint" "dynamodb" {
+  vpc_id            = data.aws_vpc.default.id
+  service_name      = "com.amazonaws.${var.aws_region}.dynamodb"
+  vpc_endpoint_type = "Gateway"
+  
+  route_table_ids = data.aws_route_tables.default.ids
+  
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-dynamodb-endpoint"
+    }
+  )
+}
+
+data "aws_route_tables" "default" {
+  vpc_id = data.aws_vpc.default.id
+}
+
+# VPC Endpoint for S3 (Gateway endpoint - free)
+resource "aws_vpc_endpoint" "s3" {
+  vpc_id            = data.aws_vpc.default.id
+  service_name      = "com.amazonaws.${var.aws_region}.s3"
+  vpc_endpoint_type = "Gateway"
+  
+  route_table_ids = data.aws_route_tables.default.ids
+  
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}-s3-endpoint"
+    }
+  )
+}
+
+# ====================================================================
 # Outputs
-output "dynamodb_processed_data_table" {
-  value       = aws_dynamodb_table.processed_data.name
-  description = "DynamoDB table name for processed data"
-}
+# ====================================================================
 
-output "dynamodb_aggregated_metrics_table" {
-  value       = aws_dynamodb_table.aggregated_metrics.name
-  description = "DynamoDB table name for aggregated metrics"
-}
-
-output "dynamodb_dlq_table" {
-  value       = aws_dynamodb_table.dead_letter_queue.name
-  description = "DynamoDB table name for dead letter queue"
+output "dynamodb_tables" {
+  description = "DynamoDB table names and ARNs"
+  value = {
+    processed_data = {
+      name = aws_dynamodb_table.processed_data.name
+      arn  = aws_dynamodb_table.processed_data.arn
+    }
+    aggregated_metrics = {
+      name = aws_dynamodb_table.aggregated_metrics.name
+      arn  = aws_dynamodb_table.aggregated_metrics.arn
+    }
+    dead_letter_queue = {
+      name = aws_dynamodb_table.dead_letter_queue.name
+      arn  = aws_dynamodb_table.dead_letter_queue.arn
+    }
+  }
 }
 
 output "s3_checkpoint_bucket" {
-  value       = aws_s3_bucket.flink_checkpoints.bucket
   description = "S3 bucket for Flink checkpoints"
+  value = {
+    name = aws_s3_bucket.flink_checkpoints.bucket
+    arn  = aws_s3_bucket.flink_checkpoints.arn
+  }
 }
 
-output "flink_role_arn" {
-  value       = aws_iam_role.flink_app.arn
-  description = "IAM role ARN for Flink application"
+output "flink_role" {
+  description = "IAM role for Flink application"
+  value = {
+    name = aws_iam_role.flink_role.name
+    arn  = aws_iam_role.flink_role.arn
+  }
+}
+
+output "vpc_endpoints" {
+  description = "VPC endpoint IDs"
+  value = {
+    dynamodb = aws_vpc_endpoint.dynamodb.id
+    s3       = aws_vpc_endpoint.s3.id
+  }
 }

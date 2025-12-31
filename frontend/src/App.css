@@ -1,94 +1,53 @@
 .App {
-  text-align: center;
   min-height: 100vh;
   background-color: #f5f5f5;
 }
 
-.App-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 2rem;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  color: #d32f2f;
+  padding: 20px;
+  text-align: center;
 }
 
-.App-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.error-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.App-header p {
-  margin: 0.5rem 0 0 0;
-  font-size: 1.2rem;
-  opacity: 0.9;
+.error-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666;
 }
 
-.App-main {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.data-section {
-  background: white;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.data-section h2 {
-  color: #333;
-  margin-top: 0;
-}
-
-.data-section button {
-  background-color: #667eea;
+.error-container button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3f51b5;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
-  margin: 1rem 0;
   transition: background-color 0.3s;
 }
 
-.data-section button:hover:not(:disabled) {
-  background-color: #5568d3;
+.error-container button:hover {
+  background-color: #303f9f;
 }
 
-.data-section button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .error-container h1 {
+    font-size: 24px;
+  }
 
-.error {
-  background-color: #fee;
-  border: 1px solid #fcc;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 1rem 0;
-  color: #c33;
-}
-
-.data-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.data-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 1rem;
-  text-align: left;
-}
-
-.data-card pre {
-  margin: 0;
-  font-size: 0.875rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-x: auto;
+  .error-container p {
+    font-size: 14px;
+  }
 }

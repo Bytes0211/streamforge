@@ -42,9 +42,8 @@ The built JAR is located at `flink-jobs/target/flink-jobs-1.0-SNAPSHOT.jar`. Sub
 ## Code Architecture
 
 ### Component Overview
-StreamForge is a real-time data streaming platform with two deployment models:
-1. **Local Development**: Kafka → Flink → MongoDB (all containerized)
-2. **AWS Production**: Kafka/Kinesis → Flink → DynamoDB + React/Amplify frontend
+StreamForge is a real-time data streaming platform:
+- **Architecture**: Kafka → Flink → MongoDB (all containerized)
 
 ### Flink Job Structure
 - **StreamProcessor.java**: Main entry point. Sets up Kafka source, applies transformations, and routes to MongoDB sink
@@ -80,17 +79,14 @@ All services communicate via `streamforge-network` bridge network. Internal Kafk
 
 ## Development Context
 
-### Project Phase
-Currently in Phase 1 (40% complete) - basic infrastructure and Flink jobs are functional. Pending work includes:
-- Kafka topic configuration and partitioning strategy
-- MongoDB schema design and indexing
+### Project Status
+Local infrastructure and Flink jobs are fully functional with:
+- Kafka topics with 3 partitions
+- MongoDB schema with 3 collections
 - Advanced stream processing (windowing, aggregations, stateful operations)
-- AWS deployment with Terraform and DynamoDB migration
-
-### Future AWS Architecture
-The local MongoDB sink will be replaced/supplemented with DynamoDB sink in production. A React frontend with chatbot UI will be deployed via AWS Amplify to visualize processed data.
+- Comprehensive testing suite
 
 ### Known Patterns
 - Connection strings use Docker service names (e.g., `mongodb://admin:password@mongodb:27017`)
-- Flink state backend uses filesystem (will migrate to S3/RocksDB for production)
-- All processing logic is currently placeholder (`.toUpperCase()`) - needs domain-specific implementation
+- Flink state backend uses filesystem checkpointing
+- Stream processing includes JSON deserialization, stateful operations, and windowed aggregations
