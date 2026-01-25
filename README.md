@@ -1,5 +1,22 @@
 # StreamForge
 
+## Why This Project Matters
+
+StreamForge demonstrates production-grade real-time stream processing with Apache Flink, Kafka, and MongoDB. It showcases my ability to build fault-tolerant, high-throughput data pipelines with stateful operations, windowed aggregations, and comprehensive testing—critical skills for modern data engineering.
+
+## Key Skills Demonstrated
+
+- Real-time stream processing with Apache Flink 1.18
+- Event-driven architecture with Apache Kafka
+- Stateful operations with ValueState
+- Windowed aggregations (tumbling windows)
+- Fault-tolerant checkpointing & externalized state
+- Dead letter queue error handling
+- Docker Compose orchestration (5 services)
+- Comprehensive testing (7 test suites, 25+ cases)
+- MongoDB document modeling
+- Production-grade performance (1000+ events/sec, <10s latency)
+
 **Status:** ✅ Local Development Complete
 
 A real-time data streaming and processing platform built with Apache Kafka, Apache Flink, and MongoDB. Features advanced stream processing with JSON deserialization, stateful operations, windowed aggregations, fault-tolerant checkpointing, and comprehensive testing.

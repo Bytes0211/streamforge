@@ -165,3 +165,33 @@ Local infrastructure and Flink jobs are fully functional with:
 - If Maven builds fail, verify `JAVA_HOME` is set to Java 11
 - If frontend won't start, run `npm install` in `frontend/` directory
 - Container name is `streamforge-mongodb` (not `streamforge-mongodb-1`)
+
+## Git Commit Convention
+
+Use conventional commit format: `type(scope): brief description`
+
+### Commit Types
+- **feat**: New feature or functionality
+- **fix**: Bug fix
+- **docs**: Documentation changes
+- **refactor**: Code refactoring without functionality change
+- **test**: Adding or updating tests
+- **chore**: Maintenance tasks (dependencies, config, infrastructure)
+- **perf**: Performance improvements
+- **style**: Code style/formatting changes
+
+### Project Scopes
+- **flink**: Flink job implementation
+- **kafka**: Kafka configuration
+- **mongodb**: MongoDB operations
+- **docker**: Docker/compose setup
+- **frontend**: React frontend
+- **maven**: Maven build configuration
+- **test**: Test suite updates
+
+### Guidelines
+- Keep first line under 72 characters
+- Use imperative mood ("add" not "added")
+- Always include: `Co-Authored-By: Warp <agent@warp.dev>`
+- Scope is optional but recommended
+- Reference issues when applicable: `fix(flink): resolve checkpoint timeout (#123)`
